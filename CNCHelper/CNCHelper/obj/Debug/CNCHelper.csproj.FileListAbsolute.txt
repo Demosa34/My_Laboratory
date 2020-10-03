@@ -1,0 +1,10 @@
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.csprojAssemblyReference.cache
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.Form1.resources
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.Properties.Resources.resources
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.csproj.GenerateResource.cache
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.csproj.CoreCompileInputs.cache
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\bin\Debug\CNCHelper.exe.config
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\bin\Debug\CNCHelper.exe
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\bin\Debug\CNCHelper.pdb
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.exe
+C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.pdb
