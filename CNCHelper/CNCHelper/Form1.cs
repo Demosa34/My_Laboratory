@@ -38,6 +38,7 @@ namespace CNCHelper
 
         public Form1()
         {
+            //Инициализация компонентов
             InitializeComponent();
             
             

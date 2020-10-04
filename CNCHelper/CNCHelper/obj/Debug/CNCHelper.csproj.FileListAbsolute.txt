@@ -8,3 +8,12 @@ C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\bin\Debug\CNCHelper.exe
 C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\bin\Debug\CNCHelper.pdb
 C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.exe
 C:\Users\DKNik\source\repos\CNCHelper\CNCHelper\obj\Debug\CNCHelper.pdb
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\bin\Debug\CNCHelper.exe.config
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\bin\Debug\CNCHelper.exe
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\bin\Debug\CNCHelper.pdb
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\obj\Debug\CNCHelper.csprojAssemblyReference.cache
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\obj\Debug\CNCHelper.Form1.resources
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\obj\Debug\CNCHelper.Properties.Resources.resources
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\obj\Debug\CNCHelper.csproj.GenerateResource.cache
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\obj\Debug\CNCHelper.exe
+D:\repos\My_Laboratory\CNCHelper\CNCHelper\obj\Debug\CNCHelper.pdb
