@@ -1,0 +1,15 @@
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\bin\Debug\directory_scan.exe.config
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\bin\Debug\directory_scan.exe
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\bin\Debug\directory_scan.pdb
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan.csprojAssemblyReference.cache
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\MainWindow.g.cs
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\App.g.cs
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan_MarkupCompile.cache
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan_MarkupCompile.lref
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\MainWindow.baml
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan.g.resources
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan.Properties.Resources.resources
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan.csproj.GenerateResource.cache
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan.csproj.CoreCompileInputs.cache
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan.exe
+C:\Users\DKNik\source\repos\directory_scan\directory_scan\obj\Debug\directory_scan.pdb
