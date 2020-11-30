@@ -1,0 +1,173 @@
+USE [eLectrolyzer]
+GO
+
+/****** Object:  Table [dbo].[tblLabData]    Script Date: 28.11.2020 18:09:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblLabData](
+	[RowId] [int] IDENTITY(1,1) NOT NULL,
+	[DateMeasurement] [datetime] NOT NULL,
+	[DateTaking] [datetime] NULL,
+	[ProgramName] [varchar](15) NULL,
+	[OperatorName] [varchar](15) NULL,
+	[ProbeNumber] [varchar](15) NULL,
+	[DeviceName] [varchar](15) NULL,
+	[RowIdLabDataDevice] [int] NOT NULL,
+	[RowIdParent] [int] NULL,
+	[RowIdLabDataTypeProbe] [int] NULL,
+	[RowIdLabDataTypeValue] [int] NULL,
+	[RowIdElectrolizer] [smallint] NULL,
+	[RowIdFoundryMixer] [int] NULL,
+	[RowIdFoundryMixAccumulator] [int] NULL,
+	[RowIdMelt] [int] NULL,
+	[Elm_Si] [numeric](9, 5) NULL,
+	[Elm_Fe] [numeric](9, 5) NULL,
+	[Elm_Cu] [numeric](9, 5) NULL,
+	[Elm_Ti] [numeric](9, 5) NULL,
+	[Elm_Mg] [numeric](9, 5) NULL,
+	[Elm_Mn] [numeric](9, 5) NULL,
+	[Elm_Zn] [numeric](9, 5) NULL,
+	[Elm_V] [numeric](9, 5) NULL,
+	[Elm_Ga] [numeric](9, 5) NULL,
+	[Elm_Na] [numeric](9, 5) NULL,
+	[Elm_Cr] [numeric](9, 5) NULL,
+	[Elm_Pb] [numeric](9, 5) NULL,
+	[Elm_As] [numeric](9, 5) NULL,
+	[Elm_Sn] [numeric](9, 5) NULL,
+	[Elm_Ni] [numeric](9, 5) NULL,
+	[Elm_B] [numeric](9, 5) NULL,
+	[Elm_Be] [numeric](9, 5) NULL,
+	[Elm_Bi] [numeric](9, 5) NULL,
+	[Elm_Ca] [numeric](9, 5) NULL,
+	[Elm_Cd] [numeric](9, 5) NULL,
+	[Elm_K] [numeric](9, 5) NULL,
+	[Elm_Li] [numeric](9, 5) NULL,
+	[Elm_Mo] [numeric](9, 5) NULL,
+	[Elm_Sb] [numeric](9, 5) NULL,
+	[Elm_Sr] [numeric](9, 5) NULL,
+	[Elm_Zr] [numeric](9, 5) NULL,
+	[Elm_Sc] [numeric](9, 5) NULL,
+	[Elm_Al_] [numeric](9, 5) NULL,
+	[Elm_Al] [numeric](9, 5) NULL,
+	[Elm_Alt] [numeric](9, 5) NULL,
+	[Elm_F] [numeric](9, 5) NULL,
+	[Elm_C] [numeric](9, 5) NULL,
+	[FE2O3] [numeric](9, 5) NULL,
+	[SO4] [numeric](9, 5) NULL,
+	[SIO2] [numeric](9, 5) NULL,
+	[CaF2] [numeric](9, 5) NULL,
+	[KM] [numeric](9, 5) NULL,
+	[CreateSystemUser] [varchar](25) NOT NULL,
+	[UpdateSystemUser] [varchar](25) NOT NULL,
+	[UpdateCurrentUser] [varchar](25) NOT NULL,
+	[CreateDatetime] [datetime] NOT NULL,
+	[UpdateDatetime] [datetime] NOT NULL,
+	[CreateHostName] [varchar](25) NULL,
+	[UpdateHostName] [varchar](25) NULL,
+	[IsDeletedFlag] [tinyint] NOT NULL,
+	[RowIdDelParent] [int] NULL,
+	[Elm_Hg] [numeric](9, 5) NULL,
+	[Duplicate] [bit] NOT NULL,
+	[Elm_P] [numeric](9, 5) NULL,
+	[Elm_Co] [numeric](9, 5) NULL,
+	[Elm_In] [numeric](9, 5) NULL,
+ CONSTRAINT [PK_tblLabData] PRIMARY KEY NONCLUSTERED 
+(
+	[RowId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [IX_tblLabData_CL] UNIQUE CLUSTERED 
+(
+	[DateMeasurement] ASC,
+	[RowId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF_tblLabData_CreateSystemUser]  DEFAULT (suser_sname()) FOR [CreateSystemUser]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF__tblLabDat__Updat__7B5C1DA2]  DEFAULT (suser_sname()) FOR [UpdateSystemUser]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF__tblLabDat__Updat__7C5041DB]  DEFAULT (user_name()) FOR [UpdateCurrentUser]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF__tblLabDat__Creat__7D446614]  DEFAULT (getdate()) FOR [CreateDatetime]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF__tblLabDat__Updat__7E388A4D]  DEFAULT (getdate()) FOR [UpdateDatetime]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF_tblLabData_CreateHostName]  DEFAULT (host_name()) FOR [CreateHostName]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF_tblLabData_UpdateHostName]  DEFAULT (host_name()) FOR [UpdateHostName]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF__tblLabDat__IsDel__7F2CAE86]  DEFAULT (0) FOR [IsDeletedFlag]
+GO
+
+ALTER TABLE [dbo].[tblLabData] ADD  CONSTRAINT [DF_tblLabData_Duplicate]  DEFAULT ((0)) FOR [Duplicate]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblElectrolizer] FOREIGN KEY([RowIdElectrolizer])
+REFERENCES [dbo].[tblElectrolizer] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblElectrolizer]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblFoundryMelt] FOREIGN KEY([RowIdMelt])
+REFERENCES [dbo].[tblFoundryMelt] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblFoundryMelt]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblFoundryMixAccumulator] FOREIGN KEY([RowIdFoundryMixAccumulator])
+REFERENCES [dbo].[tblFoundryMixAccumulator] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblFoundryMixAccumulator]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblFoundryMixer] FOREIGN KEY([RowIdFoundryMixer])
+REFERENCES [dbo].[tblFoundryMixer] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblFoundryMixer]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblLabData] FOREIGN KEY([RowIdParent])
+REFERENCES [dbo].[tblLabData] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblLabData]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblLabDataDevice1] FOREIGN KEY([RowIdLabDataDevice])
+REFERENCES [dbo].[tblLabDataDevice] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblLabDataDevice1]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblLabDataTypeProbe] FOREIGN KEY([RowIdLabDataTypeProbe])
+REFERENCES [dbo].[tblLabDataTypeProbe] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblLabDataTypeProbe]
+GO
+
+ALTER TABLE [dbo].[tblLabData]  WITH NOCHECK ADD  CONSTRAINT [FK_tblLabData_tblLabDataTypeValue] FOREIGN KEY([RowIdLabDataTypeValue])
+REFERENCES [dbo].[tblLabDataTypeValue] ([RowId])
+GO
+
+ALTER TABLE [dbo].[tblLabData] CHECK CONSTRAINT [FK_tblLabData_tblLabDataTypeValue]
+GO
+
+
